@@ -50,4 +50,30 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+.container {
+  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+}
+
+.title {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  color: #35495e;
+  letter-spacing: 1px;
+  @apply text-5xl mb-2;
+}
+
+.subtitle {
+  font-weight: 300;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+  @apply text-2xl;
+}
+
+.links {
+  @apply pt-4;
+}
 </style>

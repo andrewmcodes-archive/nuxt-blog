@@ -12,4 +12,9 @@
 img {
   @apply mb-16;
 }
+@screen md {
+  img {
+    @apply mt-16;
+  }
+}
 </style>
