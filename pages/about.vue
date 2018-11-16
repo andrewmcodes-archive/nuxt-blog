@@ -1,37 +1,12 @@
 <template>
   <section class="container">
     <div>
-      <logo/>
-      <h1 class="title">
-        Andrew Mason
-      </h1>
-      <h2 class="subtitle">
-        Welcome to my personal-site
-      </h2>
-      <div class="links">
-        <a
-          href="https://github.com/andrewmcodes"
-          target="_blank"
-          class="button--grey mb-8">GitHub</a>
-        <nuxt-link
-          to="/about"
-          target="_blank"
-          class="button--blue">About
-        </nuxt-link>
-      </div>
+      <h1 class="title">About</h1>
+      <h2 class="subtitle">About subtitle</h2>
     </div>
   </section>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
 
 <style>
 .container {
