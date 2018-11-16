@@ -24,18 +24,16 @@ html {
   margin: 0;
 }
 
-.button--green {
+.button--blue {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
   text-decoration: none;
   padding: 10px 30px;
+  @apply border border-blue bg-blue text-white;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.button--blue:hover {
+  @apply bg-white text-blue;
 }
 
 .button--grey {
@@ -51,5 +49,31 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.container {
+  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+}
+
+.title {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  color: #35495e;
+  letter-spacing: 1px;
+  @apply text-5xl mb-2;
+}
+
+.subtitle {
+  font-weight: 300;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+  @apply text-2xl;
+}
+
+.links {
+  @apply pt-4;
 }
 </style>
