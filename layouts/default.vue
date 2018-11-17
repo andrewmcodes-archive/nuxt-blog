@@ -1,9 +1,9 @@
 <template>
   <div class="sm:flex">
-    <div class="absolute z-10 w-full sm:w-1/4 lg:w-1/6">
+    <div class="absolute sm:relative z-10 w-full sm:w-1/4 shadow sm:shadow-md">
       <Nav />
     </div>
-    <div class="pt-16 relative sm:w-3/4 lg:w-5/6">
+    <div class="pt-16 sm:pt-8 relative sm:w-3/4 bg-grey-lighter">
       <nuxt/>
     </div>
   </div>
@@ -44,11 +44,11 @@ html {
   border-radius: 4px;
   text-decoration: none;
   padding: 10px 30px;
-  @apply border border-blue bg-blue text-white;
+  @apply border border-blue-darkest bg-blue-darkest text-white;
 }
 
 .button--blue:hover {
-  @apply bg-white text-blue;
+  @apply shadow-lg;
 }
 
 .button--grey {
@@ -67,7 +67,7 @@ html {
 }
 
 .container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+  @apply min-h-screen flex flex-col justify-center items-center text-center mx-auto;
 }
 
 .title {

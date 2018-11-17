@@ -46,27 +46,44 @@
       <div
         :class="open ? 'block': 'hidden'"
         class="navbar">
-        <div class="text-sm">
+        <div class="link-container">
           <a
-            href="#responsive-header"
+            href="/about"
             class="nav-link">
-            Docs
+            About
           </a>
           <a
-            href="#responsive-header"
+            href="/projects"
             class="nav-link">
-            Examples
+            Projects
           </a>
           <a
-            href="#responsive-header"
+            href="/oss"
             class="nav-link">
-            Blog
+            OSS
+          </a>
+          <a
+            href="/contact"
+            class="nav-link">
+            Contact
           </a>
         </div>
-        <div>
-          <a
-            href="#"
-            class="nav-btn">Contact</a>
+        <div class="icon-container">
+          <div
+            id="github"
+            class="w-6 h-6"
+            v-html="github"
+          />
+          <div
+            id="twitter"
+            class="w-6 h-6"
+            v-html="twitter"
+          />
+          <div
+            id="linkedin"
+            class="w-6 h-6"
+            v-html="linkedin"
+          />
         </div>
       </div>
     </nav>
@@ -74,10 +91,15 @@
 </template>
 
 <script>
+const simpleIcons = require('simple-icons')
+
 export default {
   data() {
     return {
-      open: false
+      open: false,
+      github: simpleIcons['GitHub'].svg,
+      twitter: simpleIcons['Twitter'].svg,
+      linkedin: simpleIcons['LinkedIn'].svg
     }
   },
   methods: {
@@ -90,56 +112,72 @@ export default {
 
 <style>
 .nav-container {
-  @apply font-sans antialiased bg-blue-darkest;
+  @apply font-sans antialiased bg-white w-full;
 }
 .nav {
-  @apply flex items-center justify-between flex-wrap p-6;
+  @apply flex items-center justify-between flex-wrap py-2;
 }
 .nav-brand-container {
-  @apply flex items-center flex-no-shrink text-white ml-0;
+  @apply flex items-center flex-no-shrink text-blue-darkest ml-4;
 }
 .nav-brand {
-  @apply font-semibold text-xl;
+  @apply font-light text-xl;
 }
 .nav-toggle {
-  @apply items-center px-3 py-2 border rounded text-white border-white;
+  @apply items-center px-3 py-2 rounded text-blue-darkest mr-2;
 }
 .nav-toggle-icon {
   @apply fill-current w-4 h-4 cursor-pointer align-text-bottom;
 }
 .nav-link {
-  @apply no-underline block mt-4 text-white;
+  @apply no-underline block text-blue-darkest font-semibold text-base text-center shadow-inner py-4 align-text-bottom;
 }
 .nav-btn {
-  @apply no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white mt-4;
+  @apply no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-blue-darkest border-blue-darkest mt-4;
 }
 .navbar {
   @apply w-full flex-grow text-right;
 }
+.link-container {
+  @apply pt-2 w-full;
+}
+.icon-container {
+  @apply hidden;
+}
 #sidebar-open {
   @apply block;
 }
+#twitter svg,
+#linkedin svg,
+#github svg {
+  fill: #12283a;
+}
 @screen sm {
   .nav-container {
-    @apply h-screen;
+    @apply fixed w-1/4;
   }
   .nav {
-    @apply flex-col;
+    @apply flex-col px-6 min-h-screen;
   }
   .nav-brand-container {
-    @apply w-full;
+    @apply w-full mt-4 ml-0;
   }
   .nav-link {
-    @apply block mt-8;
+    @apply block mt-8 text-left shadow-none;
   }
   .nav-btn {
     @apply mt-8;
   }
   .navbar {
-    @apply flex flex-col w-full text-left;
+    @apply flex flex-col justify-between w-full text-left;
+  }
+  .icon-container {
+    @apply flex justify-between mb-4;
   }
   #sidebar-open {
     @apply hidden;
   }
+}
+@screen lg {
 }
 </style>
