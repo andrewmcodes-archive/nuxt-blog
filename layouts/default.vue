@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="sm:flex">
+    <div class="sm:w-1/4 lg:w-1/6">
+      <Nav />
+    </div>
+    <div class="sm:w-3/4 lg:w-5/6">
+      <nuxt/>
+    </div>
   </div>
 </template>
 
