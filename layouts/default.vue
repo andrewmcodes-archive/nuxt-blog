@@ -1,9 +1,9 @@
 <template>
   <div class="sm:flex">
-    <div class="absolute z-10 w-full sm:w-1/4 lg:w-1/6">
+    <div class="absolute sm:relative z-10 w-full sm:w-1/4">
       <Nav />
     </div>
-    <div class="pt-16 relative sm:w-3/4 lg:w-5/6">
+    <div class="pt-16 sm:pt-8 relative sm:w-3/4">
       <nuxt/>
     </div>
   </div>
@@ -67,7 +67,7 @@ html {
 }
 
 .container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+  @apply min-h-screen flex flex-col justify-center items-center text-center mx-auto;
 }
 
 .title {

@@ -90,10 +90,10 @@ export default {
 
 <style>
 .nav-container {
-  @apply font-sans antialiased bg-blue-darkest;
+  @apply font-sans antialiased bg-blue-darkest w-full;
 }
 .nav {
-  @apply flex items-center justify-between flex-wrap p-6;
+  @apply flex items-center justify-between flex-wrap px-6 py-2;
 }
 .nav-brand-container {
   @apply flex items-center flex-no-shrink text-white ml-0;
@@ -102,7 +102,7 @@ export default {
   @apply font-semibold text-xl;
 }
 .nav-toggle {
-  @apply items-center px-3 py-2 border rounded text-white border-white;
+  @apply items-center px-3 py-2 rounded text-white;
 }
 .nav-toggle-icon {
   @apply fill-current w-4 h-4 cursor-pointer align-text-bottom;
@@ -121,13 +121,13 @@ export default {
 }
 @screen sm {
   .nav-container {
-    @apply h-screen;
+    @apply min-h-screen fixed w-1/4;
   }
   .nav {
     @apply flex-col;
   }
   .nav-brand-container {
-    @apply w-full;
+    @apply w-full mt-4;
   }
   .nav-link {
     @apply block mt-8;
@@ -141,5 +141,7 @@ export default {
   #sidebar-open {
     @apply hidden;
   }
+}
+@screen lg {
 }
 </style>
