@@ -1,21 +1,21 @@
 <template>
   <div
     id="nav"
-    class="font-sans antialiased sm:h-screen bg-blue-darkest"
+    class="nav-container"
   >
-    <nav class="flex sm:flex-col items-center justify-between flex-wrap p-6">
-      <div class="flex sm:w-full items-center flex-no-shrink text-white ml-0">
-        <span class="font-semibold text-xl">Andrew Mason</span>
+    <nav class="nav">
+      <div class="nav-brand-container">
+        <span class="nav-brand">Andrew Mason</span>
       </div>
       <div
         v-if="open === true"
         id="sidebar-close"
       >
         <button
-          class="items-center px-3 py-2 border rounded text-white border-white hover:text-blue-darkest hover:border-white hover:bg-white"
+          class="nav-toggle hover:text-blue-darkest hover:border-white hover:bg-white"
           @click="toggle">
           <svg
-            class="fill-current w-4 h-4 cursor-pointer align-text-bottom"
+            class="nav-toggle-icon"
             role="button"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20">
@@ -30,10 +30,10 @@
         id="sidebar-open"
       >
         <button
-          class="items-center px-3 py-2 border rounded text-white border-white hover:text-blue-darkest hover:border-white hover:bg-white"
+          class="nav-toggle hover:text-blue-darkest hover:border-white hover:bg-white"
           @click="toggle">
           <svg
-            class="fill-current w-4 h-4 cursor-pointer align-text-bottom"
+            class="nav-toggle-icon"
             role="button"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20">
@@ -45,7 +45,7 @@
       </div>
       <div
         :class="open ? 'block': 'hidden'"
-        class="w-full flex-grow sm:flex sm:flex-col sm:w-full text-right sm:text-left">
+        class="navbar">
         <div class="text-sm">
           <a
             href="#responsive-header"
@@ -89,34 +89,57 @@ export default {
 </script>
 
 <style>
+.nav-container {
+  @apply font-sans antialiased bg-blue-darkest;
+}
+.nav {
+  @apply flex items-center justify-between flex-wrap p-6;
+}
+.nav-brand-container {
+  @apply flex items-center flex-no-shrink text-white ml-0;
+}
+.nav-brand {
+  @apply font-semibold text-xl;
+}
+.nav-toggle {
+  @apply items-center px-3 py-2 border rounded text-white border-white;
+}
+.nav-toggle-icon {
+  @apply fill-current w-4 h-4 cursor-pointer align-text-bottom;
+}
 .nav-link {
   @apply no-underline block mt-4 text-white;
 }
 .nav-btn {
   @apply no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white mt-4;
 }
-/* @variants hover {
-  .nav-btn {
-    @apply border-transparent text-teal bg-white;
-  }
-} */
+.navbar {
+  @apply w-full flex-grow text-right;
+}
 #sidebar-open {
   @apply block;
 }
 @screen sm {
+  .nav-container {
+    @apply h-screen;
+  }
+  .nav {
+    @apply flex-col;
+  }
+  .nav-brand-container {
+    @apply w-full;
+  }
   .nav-link {
     @apply block mt-8;
   }
   .nav-btn {
     @apply mt-8;
   }
+  .navbar {
+    @apply flex flex-col w-full text-left;
+  }
   #sidebar-open {
     @apply hidden;
-  }
-}
-@screen md {
-  .nav-link {
-    /* @apply mr-4; */
   }
 }
 </style>
