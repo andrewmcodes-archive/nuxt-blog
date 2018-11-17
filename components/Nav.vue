@@ -7,14 +7,40 @@
       <div class="flex sm:w-full items-center flex-no-shrink text-white ml-0">
         <span class="font-semibold text-xl">Andrew Mason</span>
       </div>
-      <div class="block sm:hidden">
+      <div
+        v-if="open === true"
+        id="sidebar-close"
+      >
         <button
-          class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-blue-darkest hover:border-white hover:bg-white"
+          class="items-center px-3 py-2 border rounded text-white border-white hover:text-blue-darkest hover:border-white hover:bg-white"
           @click="toggle">
           <svg
-            class="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            class="fill-current w-4 h-4 cursor-pointer align-text-bottom"
+            role="button"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20">
+            <path
+              d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        v-else
+        id="sidebar-open"
+      >
+        <button
+          class="items-center px-3 py-2 border rounded text-white border-white hover:text-blue-darkest hover:border-white hover:bg-white"
+          @click="toggle">
+          <svg
+            class="fill-current w-4 h-4 cursor-pointer align-text-bottom"
+            role="button"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20">
+            <path
+              d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+            />
+          </svg>
         </button>
       </div>
       <div
@@ -74,12 +100,18 @@ export default {
     @apply border-transparent text-teal bg-white;
   }
 } */
+#sidebar-open {
+  @apply block;
+}
 @screen sm {
   .nav-link {
     @apply block mt-8;
   }
   .nav-btn {
     @apply mt-8;
+  }
+  #sidebar-open {
+    @apply hidden;
   }
 }
 @screen md {

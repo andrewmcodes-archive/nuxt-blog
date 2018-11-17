@@ -1,9 +1,9 @@
 <template>
   <div class="sm:flex">
-    <div class="sm:w-1/4 lg:w-1/6">
+    <div class="absolute z-10 w-full sm:w-1/4 lg:w-1/6">
       <Nav />
     </div>
-    <div class="sm:w-3/4 lg:w-5/6">
+    <div class="pt-16 relative sm:w-3/4 lg:w-5/6">
       <nuxt/>
     </div>
   </div>
