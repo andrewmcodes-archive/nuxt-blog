@@ -62,11 +62,11 @@
             class="nav-link">
             Blog
           </a>
-        </div>
-        <div>
           <a
-            href="#"
-            class="nav-btn">Contact</a>
+            href="#responsive-header"
+            class="nav-link">
+            Contact
+          </a>
         </div>
       </div>
     </nav>
@@ -90,28 +90,28 @@ export default {
 
 <style>
 .nav-container {
-  @apply font-sans antialiased bg-blue-darkest w-full;
+  @apply font-sans antialiased bg-white w-full;
 }
 .nav {
   @apply flex items-center justify-between flex-wrap px-6 py-2;
 }
 .nav-brand-container {
-  @apply flex items-center flex-no-shrink text-white ml-0;
+  @apply flex items-center flex-no-shrink text-blue-darkest ml-0;
 }
 .nav-brand {
-  @apply font-semibold text-xl;
+  @apply font-light text-xl;
 }
 .nav-toggle {
-  @apply items-center px-3 py-2 rounded text-white;
+  @apply items-center px-3 py-2 rounded text-blue-darkest;
 }
 .nav-toggle-icon {
   @apply fill-current w-4 h-4 cursor-pointer align-text-bottom;
 }
 .nav-link {
-  @apply no-underline block mt-4 text-white;
+  @apply no-underline block mt-4 text-blue-darkest font-semibold;
 }
 .nav-btn {
-  @apply no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white mt-4;
+  @apply no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-blue-darkest border-blue-darkest mt-4;
 }
 .navbar {
   @apply w-full flex-grow text-right;

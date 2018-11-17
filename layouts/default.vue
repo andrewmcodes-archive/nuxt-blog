@@ -3,7 +3,7 @@
     <div class="absolute sm:relative z-10 w-full sm:w-1/4">
       <Nav />
     </div>
-    <div class="pt-16 sm:pt-8 relative sm:w-3/4">
+    <div class="pt-16 sm:pt-8 relative sm:w-3/4 bg-grey-lightest shadow-inner">
       <nuxt/>
     </div>
   </div>
@@ -44,11 +44,11 @@ html {
   border-radius: 4px;
   text-decoration: none;
   padding: 10px 30px;
-  @apply border border-blue bg-blue text-white;
+  @apply border border-blue-darkest bg-blue-darkest text-white;
 }
 
 .button--blue:hover {
-  @apply bg-white text-blue;
+  @apply shadow-lg;
 }
 
 .button--grey {
