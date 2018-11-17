@@ -15,7 +15,8 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "simple-icons": "^1.9.13"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.4",
