@@ -1,8 +1,23 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="sm:flex">
+    <div class="absolute z-10 w-full sm:w-1/4 lg:w-1/6">
+      <Nav />
+    </div>
+    <div class="pt-16 relative sm:w-3/4 lg:w-5/6">
+      <nuxt/>
+    </div>
   </div>
 </template>
+
+<script>
+import Nav from '~/components/Nav.vue'
+
+export default {
+  components: {
+    Nav
+  }
+}
+</script>
 
 <style>
 html {
