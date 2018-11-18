@@ -1,17 +1,8 @@
 <template>
-  <div
-    id="contact"
-    class="contact-container"
-  >
+  <div id="contact" class="contact-container">
     <h1 class="title">Contact</h1>
-    <div
-      v-for="item in icons"
-      :key="item.name"
-      class="icon-container"
-    >
-      <svg
-        v-html="item.icon"
-      />
+    <div v-for="item in icons" :key="item.name" class="icon-container">
+      <svg v-html="item.icon" />
     </div>
   </div>
 </template>

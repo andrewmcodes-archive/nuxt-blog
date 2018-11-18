@@ -4,20 +4,20 @@
       id="nuxt-nav"
       class="absolute sm:relative z-10 w-full sm:w-1/4 lg:w-1/5 shadow sm:shadow-md"
     >
-      <Nav />
+      <Navbar />
     </div>
     <div class="sm:pt-0 relative sm:w-3/4 lg:w-4/5 bg-grey-lighter">
-      <nuxt/>
+      <nuxt />
     </div>
   </div>
 </template>
 
 <script>
-import Nav from '~/components/Nav.vue'
+import Navbar from '~/components/Navbar.vue'
 
 export default {
   components: {
-    Nav
+    Navbar
   }
 }
 </script>
@@ -60,18 +60,18 @@ html {
 .button--blue:hover {
   @apply shadow-lg;
 }
-.button--grey {
+.button--blue-outline {
   display: inline-block;
   border-radius: 999px;
-  border: 1px solid #35495e;
-  color: #35495e;
+  border: 1px solid hsl(229.09, 90%, 62%);
+  color: hsl(229.09, 90%, 62%);
   text-decoration: none;
   padding: 10px 30px;
   margin-left: 15px;
 }
-.button--grey:hover {
+.button--blue-outline:hover {
   color: #fff;
-  background-color: #35495e;
+  background-color: hsl(229.09, 90%, 62%);
 }
 .container {
   @apply min-h-screen flex flex-col justify-center items-center text-center mx-auto;
@@ -95,7 +95,9 @@ html {
 .links {
   @apply pt-4;
 }
-#nuxt-nav {
-  max-width: 192px;
+@screen sm {
+  #nuxt-nav {
+    max-width: 192px;
+  }
 }
 </style>

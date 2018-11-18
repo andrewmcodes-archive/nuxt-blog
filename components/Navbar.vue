@@ -1,116 +1,67 @@
 <template>
-  <div
-    id="nav"
-    class="nav-container"
-  >
+  <div id="nav" class="nav-container">
     <nav class="nav">
       <div class="nav-brand-container">
-        <a
-          href="/"
-          class="nav-brand">
+        <a href="/" class="nav-brand">
           <img
             src="../assets/images/logo.png"
             alt=""
             width="128px"
             height="120px"
             class="hidden rounded-lg"
-          >
+          />
           Andrew Mason
         </a>
       </div>
-      <div
-        v-if="open === true"
-        id="sidebar-close"
-      >
+      <div v-if="open === true" id="sidebar-close">
         <button
           class="nav-toggle hover:text-blue-darkest hover:border-white hover:bg-white"
-          @click="toggle">
+          @click="toggle"
+        >
           <svg
             class="nav-toggle-icon"
             role="button"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20">
+            viewBox="0 0 20 20"
+          >
             <path
               d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"
             />
           </svg>
         </button>
       </div>
-      <div
-        v-else
-        id="sidebar-open"
-      >
+      <div v-else id="sidebar-open">
         <button
           class="nav-toggle hover:text-blue-darkest hover:border-white hover:bg-white"
-          @click="toggle">
+          @click="toggle"
+        >
           <svg
             class="nav-toggle-icon"
             role="button"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20">
-            <path
-              d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
-            />
+            viewBox="0 0 20 20"
+          >
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </button>
       </div>
-      <div
-        :class="open ? 'block': 'hidden'"
-        class="navbar">
+      <div :class="open ? 'block' : 'hidden'" class="navbar">
         <div class="link-container">
-          <a
-            href="/about"
-            class="nav-link">
-            About
-          </a>
+          <a href="/about" class="nav-link"> About </a>
           <ul class="list-reset">
+            <li><a href="/about#bio" class="nav-sublink"> - Bio </a></li>
             <li>
-              <a
-                href="/about#bio"
-                class="nav-sublink">
-                - Bio
-              </a>
-            </li>
-            <li>
-              <a
-                href="/about#knowledge"
-                class="nav-sublink">
-                - Experience
-              </a>
+              <a href="/about#knowledge" class="nav-sublink"> - Experience </a>
             </li>
           </ul>
-          <a
-            href="/projects"
-            class="nav-link">
-            Projects
-          </a>
-          <a
-            href="/oss"
-            class="nav-link">
-            OSS
-          </a>
-          <a
-            href="/contact"
-            class="nav-link">
-            Contact
-          </a>
+          <a href="/projects" class="nav-link"> Projects </a>
+          <a href="/oss" class="nav-link"> OSS </a>
+          <a href="/contact" class="nav-link"> Contact </a>
         </div>
         <div class="icon-container">
-          <div
-            id="github"
-            class="w-8 h-8"
-            v-html="github"
-          />
-          <div
-            id="twitter"
-            class="w-8 h-8"
-            v-html="twitter"
-          />
-          <div
-            id="linkedin"
-            class="w-8 h-8"
-            v-html="linkedin"
-          />
+          <div id="github" class="w-8 h-8" v-html="github" />
+          <div id="twitter" class="w-8 h-8" v-html="twitter" />
+          <div id="linkedin" class="w-8 h-8" v-html="linkedin" />
         </div>
       </div>
     </nav>
@@ -185,7 +136,6 @@ export default {
 @screen sm {
   .nav-container {
     @apply fixed;
-    max-width: 192px;
   }
   .nav {
     @apply flex-col pl-8 pr-6 min-h-screen;
@@ -216,6 +166,11 @@ export default {
   }
   #sidebar-open {
     @apply hidden;
+  }
+}
+@screen md {
+  .nav-container {
+    max-width: 192px;
   }
 }
 @screen lg {
