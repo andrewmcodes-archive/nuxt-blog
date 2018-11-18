@@ -34,7 +34,6 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
@@ -51,7 +50,6 @@ html {
 .border-blue-primary {
   border-color: hsl(229.09, 90%, 62%);
 }
-
 .button--blue {
   display: inline-block;
   border-radius: 999px;
@@ -59,11 +57,9 @@ html {
   padding: 10px 30px;
   @apply border text-white border-blue-primary bg-blue-primary;
 }
-
 .button--blue:hover {
   @apply shadow-lg;
 }
-
 .button--grey {
   display: inline-block;
   border-radius: 999px;
@@ -73,16 +69,13 @@ html {
   padding: 10px 30px;
   margin-left: 15px;
 }
-
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
 }
-
 .container {
   @apply min-h-screen flex flex-col justify-center items-center text-center mx-auto;
 }
-
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -92,7 +85,6 @@ html {
   letter-spacing: 1px;
   @apply text-5xl mb-2;
 }
-
 .subtitle {
   font-weight: 300;
   color: #526488;
@@ -100,7 +92,6 @@ html {
   padding-bottom: 15px;
   @apply text-2xl;
 }
-
 .links {
   @apply pt-4;
 }
