@@ -179,21 +179,28 @@ export default {
   @apply flex flex-col px-1 mb-4 w-1/2;
 }
 .icon-container h3 {
-  @apply font-normal;
-  color: hsl(229.09, 90%, 62%);
+  @apply font-normal blue-primary;
 }
 .tile {
   @apply rounded-lg pt-4 bg-white shadow-md w-auto;
 }
 .tile-content {
-  @apply mt-4 p-2 align-top text-center;
-  background: hsl(200, 25%, 92%);
+  @apply mt-4 p-2 align-top text-center bg-blue-primary;
 }
 .tile-img svg {
   @apply mx-auto;
 }
 .tile-img {
   @apply w-full mx-auto flex items-center;
+}
+.blue-primary {
+  color: hsl(229.09, 90%, 62%);
+}
+.bg-blue-primary {
+  background-color: hsl(229.09, 90%, 92%);
+}
+.border-blue-primary {
+  border-color: hsl(229.09, 90%, 62%);
 }
 @screen sm {
   .knowledge-container {
