@@ -1,9 +1,9 @@
 <template>
   <div class="sm:flex">
-    <div class="absolute sm:relative z-10 w-full sm:w-1/4 lg:w-auto shadow sm:shadow-md">
+    <div class="absolute sm:relative z-10 w-full sm:w-1/4 lg:w-1/5 shadow sm:shadow-md">
       <Nav />
     </div>
-    <div class="sm:pt-0 relative sm:w-3/4 lg:w-full bg-grey-lighter">
+    <div class="sm:pt-0 relative sm:w-3/4 lg:w-4/5 bg-grey-lighter">
       <nuxt/>
     </div>
   </div>
@@ -40,13 +40,13 @@ html {
 }
 
 .blue-primary {
-  color: hsl(229.09, 90%, 52%);
+  color: hsl(229.09, 90%, 62%);
 }
 .bg-blue-primary {
-  background-color: hsl(229.09, 90%, 52%);
+  background-color: hsl(229.09, 90%, 62%);
 }
 .border-blue-primary {
-  border-color: hsl(229.09, 90%, 52%);
+  border-color: hsl(229.09, 90%, 62%);
 }
 
 .button--blue {
