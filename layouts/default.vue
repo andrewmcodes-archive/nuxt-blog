@@ -1,6 +1,9 @@
 <template>
   <div class="sm:flex">
-    <div class="absolute sm:relative z-10 w-full sm:w-1/4 lg:w-1/5 shadow sm:shadow-md">
+    <div
+      id="nuxt-nav"
+      class="absolute sm:relative z-10 w-full sm:w-1/4 lg:w-1/5 shadow sm:shadow-md"
+    >
       <Nav />
     </div>
     <div class="sm:pt-0 relative sm:w-3/4 lg:w-4/5 bg-grey-lighter">
@@ -100,5 +103,8 @@ html {
 
 .links {
   @apply pt-4;
+}
+#nuxt-nav {
+  max-width: 192px;
 }
 </style>

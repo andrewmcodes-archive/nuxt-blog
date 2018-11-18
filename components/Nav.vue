@@ -179,12 +179,13 @@ export default {
   @apply block;
 }
 .navbar svg {
-  @apply w-8 h-8 !important;
-  fill: #12283a;
+  @apply w-6 h-6 !important;
+  fill: hsl(229.09, 90%, 52%);
 }
 @screen sm {
   .nav-container {
-    @apply fixed w-1/4;
+    @apply fixed;
+    max-width: 192px;
   }
   .nav {
     @apply flex-col pl-8 pr-6 min-h-screen;
@@ -219,7 +220,7 @@ export default {
 }
 @screen lg {
   .nav-container {
-    @apply w-1/5;
+    max-width: 192px;
   }
 }
 </style>
