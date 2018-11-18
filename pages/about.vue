@@ -1,12 +1,30 @@
 <template>
   <section class="container">
-    <div>
-      <h1 class="title">About</h1>
-      <h2 class="subtitle">About subtitle</h2>
-    </div>
+    <h1 class="title">About</h1>
+    <Bio />
+    <Knowledge />
   </section>
 </template>
 
+<script>
+import Knowledge from '~/components/Knowledge.vue'
+import Bio from '~/components/Bio.vue'
+
+export default {
+  components: {
+    Knowledge,
+    Bio
+  }
+}
+</script>
 
 <style>
+.container {
+  @apply text-left;
+}
+.line-seperator {
+  @apply bg-blue opacity-50 -mt-2 mb-4;
+  height: 1px;
+  width: 64px;
+}
 </style>

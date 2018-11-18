@@ -1,9 +1,9 @@
 <template>
   <div class="sm:flex">
-    <div class="absolute sm:relative z-10 w-full sm:w-1/4 shadow sm:shadow-md">
+    <div class="absolute sm:relative z-10 w-full sm:w-1/4 lg:w-1/5 shadow sm:shadow-md">
       <Nav />
     </div>
-    <div class="pt-16 sm:pt-8 relative sm:w-3/4 bg-grey-lighter">
+    <div class="pt-16 sm:pt-8 relative sm:w-3/4 lg:w-4/5 bg-grey-lighter">
       <nuxt/>
     </div>
   </div>
