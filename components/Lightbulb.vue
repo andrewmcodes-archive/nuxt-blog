@@ -1,10 +1,6 @@
 <template>
   <div class="lightbulb">
-    <img
-      src="~/assets/images/lightbulb.svg"
-      alt="Logo"
-      width="240px"
-    >
+    <img src="~/assets/images/lightbulb.svg" alt="Logo" width="240px" />
   </div>
 </template>
 

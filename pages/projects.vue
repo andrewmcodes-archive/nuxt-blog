@@ -1,106 +1,92 @@
 <template>
   <section class="container">
-    <div>
-      <h1 class="title">Projects</h1>
-      <h2 class="subtitle">Projects subtitle</h2>
-    </div>
-    <div class="flex flex-col sm:flex-row">
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://tailwindcss.com/img/card-top.jpg"
-          alt="Sunset in the mountains">
-        <div class="card-body">
-          <div class="card-title">The Coldest Sunset</div>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="card-footer">
-          <span class="card-footer-link mr-2">#photography</span>
-          <span class="card-footer-link mr-2">#travel</span>
-          <span class="card-footer-link">#winter</span>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://tailwindcss.com/img/card-top.jpg"
-          alt="Sunset in the mountains">
-        <div class="card-body">
-          <div class="card-title">The Coldest Sunset</div>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="card-footer">
-          <span class="card-footer-link mr-2">#photography</span>
-          <span class="card-footer-link mr-2">#travel</span>
-          <span class="card-footer-link">#winter</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex flex-col sm:flex-row">
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://tailwindcss.com/img/card-top.jpg"
-          alt="Sunset in the mountains">
-        <div class="card-body">
-          <div class="card-title">The Coldest Sunset</div>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="card-footer">
-          <span class="card-footer-link mr-2">#photography</span>
-          <span class="card-footer-link mr-2">#travel</span>
-          <span class="card-footer-link">#winter</span>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://tailwindcss.com/img/card-top.jpg"
-          alt="Sunset in the mountains">
-        <div class="card-body">
-          <div class="card-title">The Coldest Sunset</div>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="card-footer">
-          <span class="card-footer-link mr-2">#photography</span>
-          <span class="card-footer-link mr-2">#travel</span>
-          <span class="card-footer-link">#winter</span>
+    <h1 class="title">Projects</h1>
+    <div id="projects" class="projects-container">
+      <h1 class="subtitle">My Projects</h1>
+      <div class="project-grid">
+        <div v-for="item in myProjects" :key="item.name">
+          <div class="project-container">
+            <div
+              class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden"
+            >
+              <div class="px-6 py-4">
+                <svg
+                  class="block w-12 h-12 rounded-full mx-auto mb-4"
+                  v-html="item.icon"
+                />
+                <div class="text-center">
+                  <div class="mb-4">
+                    <p class="text-xl leading-tight">Adam Wathan</p>
+                  </div>
+                  <div>
+                    <a
+                      href="https://github.com/andrewmcodes"
+                      target="_blank"
+                      class="button--grey mb-8"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </template>
 
+<script>
+const simpleIcons = require('simple-icons')
+
+export default {
+  data() {
+    return {
+      myProjects: [
+        {
+          name: 'vscode-ruby',
+          icon: simpleIcons['GitHub'].svg,
+          link: 'https://github.com/rubyide/vscode-ruby'
+        },
+        { name: 'Twitter', icon: simpleIcons['Twitter'].svg, link: 'x' },
+        { name: 'LinkedIn', icon: simpleIcons['LinkedIn'].svg, link: 'x' },
+        { name: 'CodePen', icon: simpleIcons['CodePen'].svg, link: 'x' }
+      ]
+    }
+  }
+}
+</script>
 
 <style>
-.card {
-  @apply max-w-sm rounded overflow-hidden shadow-lg mx-4 mb-4;
+.subtitle {
+  @apply text-4xl font-light;
 }
-.card-img {
-  @apply w-full;
+.category-title {
+  @apply text-left text-2xl mt-6 mb-4 font-light;
 }
-.card-body {
-  @apply px-6 py-4;
+.projects-container {
+  @apply px-4 mt-8;
 }
-.card-title {
-  @apply font-bold text-xl mb-2;
+.project-grid {
+  @apply flex flex-wrap overflow-hidden;
 }
-.card-text {
-  @apply text-grey-darker text-base;
+.icon-grid svg {
+  @apply w-12 h-12 mx-auto;
+  fill: hsl(229.09, 90%, 52%);
 }
-.card-footer {
-  @apply px-6 py-4;
+.blue-primary {
+  color: hsl(229.09, 90%, 62%);
 }
-.card-footer-link {
-  @apply inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker;
+.bg-blue-primary {
+  background-color: hsl(229.09, 90%, 92%);
+}
+.border-blue-primary {
+  border-color: hsl(229.09, 90%, 62%);
+}
+@screen sm {
+  .projects-container {
+    @apply px-8;
+  }
 }
 </style>

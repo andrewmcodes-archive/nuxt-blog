@@ -1,85 +1,34 @@
 <template>
-  <div
-    id="knowledge"
-    class="knowledge-container"
-  >
+  <div id="knowledge" class="knowledge-container">
     <h1 class="subtitle">Language &amp; Tool Experience</h1>
     <div class="line-seperator" />
-    <h2
-      class="category-title"
-    >
-      Experimented with...
-    </h2>
-    <div
-      class="icon-grid"
-    >
-      <div
-        v-for="item in experimented"
-        :key="item.name"
-        class="icon-container"
-      >
+    <h2 class="category-title">Experimented with...</h2>
+    <div class="icon-grid">
+      <div v-for="item in experimented" :key="item.name" class="icon-container">
         <div class="tile">
-          <div
-            class="tile-img"
-          >
-            <svg
-              v-html="item.icon"
-            />
-          </div>
+          <div class="tile-img"><svg v-html="item.icon" /></div>
           <div class="tile-content">
             <h3>{{ item.name }}</h3>
           </div>
         </div>
       </div>
     </div>
-    <h2
-      class="category-title"
-    >
-      Familiar with...
-    </h2>
-    <div
-      class="icon-grid"
-    >
-      <div
-        v-for="item in famaliar"
-        :key="item.name"
-        class="icon-container"
-      >
+    <h2 class="category-title">Familiar with...</h2>
+    <div class="icon-grid">
+      <div v-for="item in famaliar" :key="item.name" class="icon-container">
         <div class="tile">
-          <div
-            class="tile-img"
-          >
-            <svg
-              v-html="item.icon"
-            />
-          </div>
+          <div class="tile-img"><svg v-html="item.icon" /></div>
           <div class="tile-content">
             <h3>{{ item.name }}</h3>
           </div>
         </div>
       </div>
     </div>
-    <h2
-      class="category-title"
-    >
-      Proficient with...
-    </h2>
-    <div
-      class="icon-grid"
-    >
-      <div
-        v-for="item in proficient"
-        :key="item.name"
-        class="icon-container"
-      >
+    <h2 class="category-title">Proficient with...</h2>
+    <div class="icon-grid">
+      <div v-for="item in proficient" :key="item.name" class="icon-container">
         <div class="tile">
-          <div
-            class="tile-img"
-          >
-            <svg
-              v-html="item.icon"
-            />
-          </div>
+          <div class="tile-img"><svg v-html="item.icon" /></div>
           <div class="tile-content">
             <h3>{{ item.name }}</h3>
           </div>
@@ -166,9 +115,6 @@ export default {
 .icon-grid svg {
   @apply w-12 h-12 mx-auto;
   fill: hsl(229.09, 90%, 52%);
-}
-.icon-grid svg::after {
-  content: '';
 }
 .tile-seperator {
   @apply bg-blue opacity-50 mt-4;

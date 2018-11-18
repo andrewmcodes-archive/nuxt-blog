@@ -21,13 +21,13 @@
   "devDependencies": {
     "autoprefixer": "^8.6.4",
     "babel-eslint": "^8.2.1",
-    "eslint": "^5.9.0",
-    "eslint-config-prettier": "^3.1.0",
+    "eslint": "^5.0.0",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-prettier": "2.6.2",
-    "eslint-plugin-vue": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-vue": "^4.7.1",
     "nodemon": "^1.11.0",
-    "prettier": "1.14.3",
+    "prettier": "1.15.2",
     "tailwindcss": "~0.6.6"
   }
 }
