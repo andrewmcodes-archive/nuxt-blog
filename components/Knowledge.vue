@@ -88,7 +88,8 @@ export default {
         { name: 'Kibana', icon: simpleIcons['Kibana'].svg },
         { name: 'Salesforce', icon: simpleIcons['Salesforce'].svg },
         { name: 'Stripe', icon: simpleIcons['Stripe'].svg },
-        { name: 'Redux', icon: simpleIcons['Redux'].svg }
+        { name: 'Redux', icon: simpleIcons['Redux'].svg },
+        { name: 'Rust', icon: simpleIcons['Rust'].svg }
       ],
       famaliar: [
         { name: 'Gatsby', icon: simpleIcons['Gatsby'].svg },
@@ -121,7 +122,8 @@ export default {
         { name: 'Netlify', icon: simpleIcons['Netlify'].svg },
         { name: 'Python', icon: simpleIcons['Python'].svg },
         { name: 'MySQL', icon: simpleIcons['MySQL'].svg },
-        { name: 'Bootstrap', icon: simpleIcons['Bootstrap'].svg }
+        { name: 'Bootstrap', icon: simpleIcons['Bootstrap'].svg },
+        { name: 'JSON', icon: simpleIcons['JSON'].svg }
       ]
     }
   },
@@ -158,7 +160,7 @@ export default {
   height: 1px;
   width: 64px;
 }
-.icon-container {
+#knowledge .icon-container {
   @apply flex flex-col mx-auto mb-4 w-auto;
 }
 .icon-container h3 {
@@ -174,7 +176,7 @@ export default {
   .icon-grid svg {
     @apply w-8 h-8;
   }
-  .icon-container {
+  #knowledge .icon-container {
     @apply w-1/4;
   }
   .tile {
