@@ -20,7 +20,12 @@ export default {
 
 <style>
 .container {
-  @apply text-left;
+  @apply text-left mt-4;
+}
+@screen md {
+  .container {
+    @apply mt-8;
+  }
 }
 .line-seperator {
   @apply bg-blue opacity-50 -mt-2 mb-4;

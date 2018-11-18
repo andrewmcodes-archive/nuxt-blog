@@ -59,16 +59,16 @@
           <ul class="list-reset">
             <li>
               <a
-                href="/about"
+                href="/about#bio"
                 class="nav-sublink">
                 Bio
               </a>
             </li>
             <li>
               <a
-                href="/about"
+                href="/about#knowledge"
                 class="nav-sublink">
-                Language &amp; Tool Experience
+                Experience
               </a>
             </li>
           </ul>
@@ -165,15 +165,14 @@ export default {
 .link-container {
   @apply pt-2 w-full;
 }
-.icon-container {
+#nav .icon-container {
   @apply hidden;
 }
 #sidebar-open {
   @apply block;
 }
-#twitter svg,
-#linkedin svg,
-#github svg {
+.navbar svg {
+  @apply w-8 h-8 !important;
   fill: #12283a;
 }
 @screen sm {
@@ -201,13 +200,16 @@ export default {
   .navbar {
     @apply flex flex-col justify-between w-full text-left;
   }
-  .icon-container {
-    @apply flex justify-between mb-4;
+  #nav .icon-container {
+    @apply flex flex-row justify-between mx-2 mb-4 !important;
   }
   #sidebar-open {
     @apply hidden;
   }
 }
-@screen lg {
+@screen md {
+  .nav-container {
+    @apply w-1/5;
+  }
 }
 </style>

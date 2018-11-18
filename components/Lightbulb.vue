@@ -10,6 +10,11 @@
 
 <style>
 .lightbulb img {
-  @apply mt-0;
+  @apply mb-4;
+}
+@screen md {
+  .lightbulb img {
+    @apply mb-8;
+  }
 }
 </style>
