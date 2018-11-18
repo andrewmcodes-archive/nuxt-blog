@@ -1,9 +1,9 @@
 <template>
   <div class="sm:flex">
-    <div class="absolute sm:relative z-10 w-full sm:w-1/4 lg:w-1/5 shadow sm:shadow-md">
+    <div class="absolute sm:relative z-10 w-full sm:w-1/4 lg:w-auto shadow sm:shadow-md">
       <Nav />
     </div>
-    <div class="pt-16 sm:pt-0 relative sm:w-3/4 lg:w-4/5 bg-grey-lighter">
+    <div class="sm:pt-0 relative sm:w-3/4 lg:w-full bg-grey-lighter">
       <nuxt/>
     </div>
   </div>
@@ -39,12 +39,22 @@ html {
   margin: 0;
 }
 
+.blue-primary {
+  color: hsl(229.09, 90%, 52%);
+}
+.bg-blue-primary {
+  background-color: hsl(229.09, 90%, 52%);
+}
+.border-blue-primary {
+  border-color: hsl(229.09, 90%, 52%);
+}
+
 .button--blue {
   display: inline-block;
-  border-radius: 4px;
+  border-radius: 999px;
   text-decoration: none;
   padding: 10px 30px;
-  @apply border border-blue-darkest bg-blue-darkest text-white;
+  @apply border text-white border-blue-primary bg-blue-primary;
 }
 
 .button--blue:hover {
@@ -53,7 +63,7 @@ html {
 
 .button--grey {
   display: inline-block;
-  border-radius: 4px;
+  border-radius: 999px;
   border: 1px solid #35495e;
   color: #35495e;
   text-decoration: none;

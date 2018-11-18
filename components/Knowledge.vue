@@ -46,11 +46,16 @@
         class="icon-container"
       >
         <div class="tile">
-          <svg
-            v-html="item.icon"
-          />
-          <div class="tile-seperator" />
-          <h3>{{ item.name }}</h3>
+          <div
+            class="tile-img"
+          >
+            <svg
+              v-html="item.icon"
+            />
+          </div>
+          <div class="tile-content">
+            <h3>{{ item.name }}</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -68,11 +73,16 @@
         class="icon-container"
       >
         <div class="tile">
-          <svg
-            v-html="item.icon"
-          />
-          <div class="tile-seperator" />
-          <h3>{{ item.name }}</h3>
+          <div
+            class="tile-img"
+          >
+            <svg
+              v-html="item.icon"
+            />
+          </div>
+          <div class="tile-content">
+            <h3>{{ item.name }}</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -154,8 +164,8 @@ export default {
   @apply flex flex-wrap overflow-hidden;
 }
 .icon-grid svg {
-  @apply w-16 h-16 mx-auto;
-  fill: #12283a;
+  @apply w-12 h-12 mx-auto;
+  fill: hsl(229.09, 90%, 52%);
 }
 .icon-grid svg::after {
   content: '';
@@ -170,6 +180,7 @@ export default {
 }
 .icon-container h3 {
   @apply font-normal;
+  color: hsl(229.09, 90%, 62%);
 }
 .tile {
   @apply rounded-lg pt-4 bg-white shadow-md w-auto;
