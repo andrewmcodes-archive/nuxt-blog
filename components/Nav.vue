@@ -207,6 +207,9 @@ export default {
     @apply hidden;
   }
 }
-@screen lg {
+@screen md {
+  .nav-container {
+    @apply w-1/5;
+  }
 }
 </style>

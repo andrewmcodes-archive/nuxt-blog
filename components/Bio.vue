@@ -1,7 +1,7 @@
 <template>
   <div
     id="bio"
-    class="px-4 sm:px-8"
+    class="mx-4 sm:mx-8"
   >
     <h1 class="subtitle">Bio</h1>
     <div class="line-seperator" />

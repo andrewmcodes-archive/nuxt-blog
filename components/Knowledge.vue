@@ -19,11 +19,16 @@
         class="icon-container"
       >
         <div class="tile">
-          <svg
-            v-html="item.icon"
-          />
-          <div class="tile-seperator" />
-          <h3>{{ item.name }}</h3>
+          <div
+            class="tile-img"
+          >
+            <svg
+              v-html="item.icon"
+            />
+          </div>
+          <div class="tile-content">
+            <h3>{{ item.name }}</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -161,13 +166,23 @@ export default {
   width: 64px;
 }
 #knowledge .icon-container {
-  @apply flex flex-col mx-auto mb-4 w-auto;
+  @apply flex flex-col px-1 mb-4 w-1/2;
 }
 .icon-container h3 {
-  @apply mt-3 font-normal;
+  @apply font-normal;
 }
 .tile {
-  @apply rounded-lg p-4 bg-white shadow;
+  @apply rounded-lg pt-4 bg-white shadow-md w-auto;
+}
+.tile-content {
+  @apply mt-4 p-2 align-top text-center;
+  background: hsl(200, 25%, 92%);
+}
+.tile-img svg {
+  @apply mx-auto;
+}
+.tile-img {
+  @apply w-full mx-auto flex items-center;
 }
 @screen sm {
   .knowledge-container {
@@ -180,7 +195,7 @@ export default {
     @apply w-1/4;
   }
   .tile {
-    @apply rounded-lg mx-2 py-4 px-2 bg-white shadow-md;
+    @apply rounded-lg mx-1 pt-4 px-0 bg-white shadow-md;
   }
   .tile-seperator {
     @apply mt-0;
@@ -191,7 +206,7 @@ export default {
     @apply w-16 h-16;
   }
   .tile {
-    @apply mx-4 px-4;
+    @apply mx-2 px-0;
   }
 }
 </style>
