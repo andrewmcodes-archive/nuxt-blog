@@ -68,7 +68,7 @@
               <a
                 href="/about#knowledge"
                 class="nav-sublink">
-                Language &amp; Tool Experience
+                Experience
               </a>
             </li>
           </ul>
