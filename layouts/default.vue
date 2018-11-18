@@ -4,7 +4,7 @@
       id="nuxt-nav"
       class="absolute sm:relative z-10 w-full sm:w-1/4 lg:w-1/5 shadow sm:shadow-md"
     >
-      <nav />
+      <Navbar />
     </div>
     <div class="sm:pt-0 relative sm:w-3/4 lg:w-4/5 bg-grey-lighter">
       <nuxt />
@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import Nav from '~/components/Nav.vue'
+import Navbar from '~/components/Navbar.vue'
 
 export default {
   components: {
-    Nav
+    Navbar
   }
 }
 </script>
