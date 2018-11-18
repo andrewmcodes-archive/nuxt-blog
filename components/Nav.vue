@@ -5,7 +5,11 @@
   >
     <nav class="nav">
       <div class="nav-brand-container">
-        <span class="nav-brand">Andrew Mason</span>
+        <a
+          href="/"
+          class="nav-brand">
+          Andrew Mason
+        </a>
       </div>
       <div
         v-if="open === true"
@@ -52,6 +56,22 @@
             class="nav-link">
             About
           </a>
+          <ul class="list-reset">
+            <li>
+              <a
+                href="/about"
+                class="nav-sublink">
+                Bio
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about"
+                class="nav-sublink">
+                Language &amp; Tool Experience
+              </a>
+            </li>
+          </ul>
           <a
             href="/projects"
             class="nav-link">
@@ -121,7 +141,8 @@ export default {
   @apply flex items-center flex-no-shrink text-blue-darkest ml-4;
 }
 .nav-brand {
-  @apply font-light text-xl;
+  @apply font-light text-xl no-underline;
+  color: #35495e;
 }
 .nav-toggle {
   @apply items-center px-3 py-2 rounded text-blue-darkest mr-2;
@@ -130,7 +151,10 @@ export default {
   @apply fill-current w-4 h-4 cursor-pointer align-text-bottom;
 }
 .nav-link {
-  @apply no-underline block text-blue-darkest font-semibold text-base text-center shadow-inner py-4 align-text-bottom;
+  @apply no-underline block text-blue-darkest font-semibold text-base text-center shadow-inner py-4 align-text-bottom uppercase tracking-wide;
+}
+.nav-sublink {
+  @apply hidden;
 }
 .nav-btn {
   @apply no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-blue-darkest border-blue-darkest mt-4;
@@ -164,6 +188,12 @@ export default {
   }
   .nav-link {
     @apply block mt-8 text-left shadow-none;
+  }
+  .nav-sublink {
+    @apply no-underline block text-grey-dark font-semibold text-xs text-left py-1 align-text-bottom;
+  }
+  .nav-sublink:hover {
+    @apply text-blue;
   }
   .nav-btn {
     @apply mt-8;
