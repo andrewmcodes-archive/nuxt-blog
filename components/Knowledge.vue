@@ -46,16 +46,11 @@
         class="icon-container"
       >
         <div class="tile">
-          <div
-            class="tile-img"
-          >
-            <svg
-              v-html="item.icon"
-            />
-          </div>
-          <div class="tile-content">
-            <h3>{{ item.name }}</h3>
-          </div>
+          <svg
+            v-html="item.icon"
+          />
+          <div class="tile-seperator" />
+          <h3>{{ item.name }}</h3>
         </div>
       </div>
     </div>
@@ -73,16 +68,11 @@
         class="icon-container"
       >
         <div class="tile">
-          <div
-            class="tile-img"
-          >
-            <svg
-              v-html="item.icon"
-            />
-          </div>
-          <div class="tile-content">
-            <h3>{{ item.name }}</h3>
-          </div>
+          <svg
+            v-html="item.icon"
+          />
+          <div class="tile-seperator" />
+          <h3>{{ item.name }}</h3>
         </div>
       </div>
     </div>
@@ -164,8 +154,8 @@ export default {
   @apply flex flex-wrap overflow-hidden;
 }
 .icon-grid svg {
-  @apply w-12 h-12 mx-auto;
-  fill: hsl(229.09, 90%, 52%);
+  @apply w-16 h-16 mx-auto;
+  fill: #12283a;
 }
 .icon-grid svg::after {
   content: '';
@@ -179,28 +169,20 @@ export default {
   @apply flex flex-col px-1 mb-4 w-1/2;
 }
 .icon-container h3 {
-  @apply font-normal blue-primary;
+  @apply font-normal;
 }
 .tile {
   @apply rounded-lg pt-4 bg-white shadow-md w-auto;
 }
 .tile-content {
-  @apply mt-4 p-2 align-top text-center bg-blue-primary;
+  @apply mt-4 p-2 align-top text-center;
+  background: hsl(200, 25%, 92%);
 }
 .tile-img svg {
   @apply mx-auto;
 }
 .tile-img {
   @apply w-full mx-auto flex items-center;
-}
-.blue-primary {
-  color: hsl(229.09, 90%, 62%);
-}
-.bg-blue-primary {
-  background-color: hsl(229.09, 90%, 92%);
-}
-.border-blue-primary {
-  border-color: hsl(229.09, 90%, 62%);
 }
 @screen sm {
   .knowledge-container {

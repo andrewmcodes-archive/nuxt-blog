@@ -8,13 +8,6 @@
         <a
           href="/"
           class="nav-brand">
-          <img
-            src="../assets/images/logo.png"
-            alt=""
-            width="128px"
-            height="120px"
-            class="hidden rounded-lg"
-          >
           Andrew Mason
         </a>
       </div>
@@ -68,14 +61,14 @@
               <a
                 href="/about#bio"
                 class="nav-sublink">
-                - Bio
+                Bio
               </a>
             </li>
             <li>
               <a
                 href="/about#knowledge"
                 class="nav-sublink">
-                - Experience
+                Experience
               </a>
             </li>
           </ul>
@@ -98,17 +91,17 @@
         <div class="icon-container">
           <div
             id="github"
-            class="w-8 h-8"
+            class="w-6 h-6"
             v-html="github"
           />
           <div
             id="twitter"
-            class="w-8 h-8"
+            class="w-6 h-6"
             v-html="twitter"
           />
           <div
             id="linkedin"
-            class="w-8 h-8"
+            class="w-6 h-6"
             v-html="linkedin"
           />
         </div>
@@ -187,16 +180,13 @@ export default {
     @apply fixed w-1/4;
   }
   .nav {
-    @apply flex-col pl-8 pr-6 min-h-screen;
+    @apply flex-col px-6 min-h-screen;
   }
   .nav-brand-container {
     @apply w-full mt-4 ml-0;
   }
-  .nav-brand img {
-    @apply block mt-0 mb-4;
-  }
   .nav-link {
-    @apply block mt-2 text-left shadow-none;
+    @apply block mt-8 text-left shadow-none;
   }
   .nav-sublink {
     @apply no-underline block text-grey-dark font-semibold text-xs text-left py-1 align-text-bottom;
@@ -211,13 +201,13 @@ export default {
     @apply flex flex-col justify-between w-full text-left;
   }
   #nav .icon-container {
-    @apply flex flex-row justify-between mb-4 !important;
+    @apply flex flex-row justify-between mx-2 mb-4 !important;
   }
   #sidebar-open {
     @apply hidden;
   }
 }
-@screen lg {
+@screen md {
   .nav-container {
     @apply w-1/5;
   }
