@@ -2,7 +2,7 @@
   <section class="container">
     <Lightbulb />
     <h1 class="title">
-      Hello,<br> my name is Andrew
+      <span class="blue-primary">Hello,</span><br> my name is Andrew
     </h1>
     <h2 class="subtitle">
       Welcome to my personal-site
