@@ -9,7 +9,7 @@
       <a
         href="https://github.com/andrewmcodes"
         target="_blank"
-        class="button--grey mb-8"
+        class="button--blue-outline mb-8"
       >
         GitHub
       </a>

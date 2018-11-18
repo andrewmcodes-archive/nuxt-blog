@@ -60,18 +60,18 @@ html {
 .button--blue:hover {
   @apply shadow-lg;
 }
-.button--grey {
+.button--blue-outline {
   display: inline-block;
   border-radius: 999px;
-  border: 1px solid #35495e;
-  color: #35495e;
+  border: 1px solid hsl(229.09, 90%, 62%);
+  color: hsl(229.09, 90%, 62%);
   text-decoration: none;
   padding: 10px 30px;
   margin-left: 15px;
 }
-.button--grey:hover {
+.button--blue-outline:hover {
   color: #fff;
-  background-color: #35495e;
+  background-color: hsl(229.09, 90%, 62%);
 }
 .container {
   @apply min-h-screen flex flex-col justify-center items-center text-center mx-auto;
