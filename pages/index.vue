@@ -1,5 +1,6 @@
 <template>
   <section class="container">
+    <Lightbulb />
     <h1 class="title">
       Hello,<br> my name is Andrew
     </h1>
@@ -21,10 +22,12 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Lightbulb from '~/components/Lightbulb.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Lightbulb
   }
 }
 </script>
